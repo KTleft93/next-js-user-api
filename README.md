@@ -84,7 +84,7 @@ Your server will be running at [http://localhost:3000](http://localhost:3000).
 
 ### 1. **Register User**
 
-`POST /api/auth/register`
+`POST /api/register`
 
 **Request Body:**
 
