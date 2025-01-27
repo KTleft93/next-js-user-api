@@ -59,25 +59,6 @@ Your server will be running at [http://localhost:3000](http://localhost:3000).
 
 ---
 
-## Project Structure
-
-```plaintext
-📦nextjs-user-api
-├── 📂models
-│   ├── User.js            # Mongoose schema for User
-├── 📂pages
-│   ├── 📂api
-│       ├── auth
-│           ├── login.js   # Login API endpoint
-│           ├── register.js # Register API endpoint
-├── 📂middleware
-│   ├── authMiddleware.js  # Middleware to verify JWT
-├── 📂utils
-│   ├── dbConnect.js       # MongoDB connection utility
-├── .env.local             # Environment variables
-├── package.json           # Project dependencies
-```
-
 ---
 
 ## API Endpoints
@@ -107,7 +88,7 @@ Your server will be running at [http://localhost:3000](http://localhost:3000).
 
 ### 2. **Login User**
 
-`POST /api/auth/login`
+`POST /api/login`
 
 **Request Body:**
 
@@ -131,9 +112,9 @@ Your server will be running at [http://localhost:3000](http://localhost:3000).
 
 ## How It Works
 
-1. **User Registration:** User details are stored in MongoDB after password hashing with Bcrypt.
+1. **User Registration:** User details are stored in MongoDB(Or any storage location) after password hashing with Bcrypt.
 2. **Login:** Generates a JWT upon successful login, which can be used for authentication.
-3. **JWT Validation:** Middleware verifies JWT on protected routes.
+3. **JWT Validation:** Middleware.ts verifies JWT on protected routes which are open for you to develop on top.
 
 ---
 
